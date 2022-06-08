@@ -68,3 +68,21 @@ class Department {
   // const accountingCopy = { name: 'DUMMY', describe: accounting.describe };
   
   // accountingCopy.describe();
+
+  interface Person{
+      name:string;
+      age:number;
+
+      greet(phase:string):void
+  }
+
+  let user:Person;
+
+  user={
+      name:'Daniela',
+      age:34,
+      greet(phase:string){
+          console.log(phase + '' + this.name)
+      }
+  }
+  user.greet('Hello, my name is')

@@ -44,4 +44,13 @@ console.log(it);
 const accounting = new AccountingDepartment('d2', []);
 accounting.addReport('Something went wrong...');
 accounting.printReports();
+let user;
+user = {
+    name: 'Daniela',
+    age: 34,
+    greet(phase) {
+        console.log(phase + '' + this.name);
+    }
+};
+user.greet('Hello, my name is');
 //# sourceMappingURL=app.js.map
