@@ -1,5 +1,5 @@
 class Department {
-  private employees: string[] = [];
+  employees: string[] = [];
 
   constructor
   (private readonly id: string, public name: string) {
@@ -34,6 +34,13 @@ class AccountingDepartment extends Department {
     super(id, 'Accounting');
   }
 
+  addEmployee(name:string){
+     if(name==='Maria'){
+       return
+     }
+     this.employees.push(name)
+  }
+
   addReport(text: string) {
     this.reports.push(text);
   }
@@ -45,7 +52,7 @@ class AccountingDepartment extends Department {
 
 const it = new ITDepartment('d1', ['Max']);
 
-it.addEmployee('Max');
+it.addEmployee('Maria');
 it.addEmployee('Manu');
 
 it.describe();
