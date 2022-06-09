@@ -1,56 +1,21 @@
 "use strict";
-class Department {
-    constructor(id, name) {
-        this.id = id;
-        this.name = name;
-        this.employees = [];
+class Prop {
+    constructor(n, a) {
+        this.workers = [];
+        this.name = n;
+        this.age = a;
     }
-    describe() {
-        console.log(`Department (${this.id}): ${this.name}`);
+    addWorkers(worker) {
+        this.workers.push(worker);
     }
-    addEmployee(employee) {
-        this.employees.push(employee);
-    }
-    printEmployeeInformation() {
-        console.log(this.employees.length);
-        console.log(this.employees);
+    printWorkers() {
+        console.log(this.workers.length);
+        console.log(this.workers);
     }
 }
-class ITDepartment extends Department {
-    constructor(id, admins) {
-        super(id, 'IT');
-        this.admins = admins;
-    }
-}
-class AccountingDepartment extends Department {
-    constructor(id, reports) {
-        super(id, 'Accounting');
-        this.reports = reports;
-    }
-    addReport(text) {
-        this.reports.push(text);
-    }
-    printReports() {
-        console.log(this.reports);
-    }
-}
-const it = new ITDepartment('d1', ['Max']);
-it.addEmployee('Max');
-it.addEmployee('Manu');
-it.describe();
-it.name = 'NEW NAME';
-it.printEmployeeInformation();
-console.log(it);
-const accounting = new AccountingDepartment('d2', []);
-accounting.addReport('Something went wrong...');
-accounting.printReports();
-let user;
-user = {
-    name: 'Daniela',
-    age: 34,
-    greet(phase) {
-        console.log(phase + '' + this.name);
-    }
-};
-user.greet('Hello, my name is');
+const account = new Prop('Daniela', 24);
+account.addWorkers('Michal');
+account.addWorkers('Eryk');
+account.workers[2] = 'Ewa';
+console.log(account);
 //# sourceMappingURL=app.js.map
