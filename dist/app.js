@@ -40,6 +40,27 @@ class AccountingDepartment extends Department {
         console.log(this.reports);
     }
 }
+const hobbies = ['Sports', 'Cinema', 'Animals'];
+const extraHobbies = ['Swimming', 'walking'];
+extraHobbies.push(...hobbies);
+console.log(extraHobbies);
+const person = {
+    name: 'Daniela',
+    age: 34
+};
+const newPerson = Object.assign({}, person);
+console.log(newPerson);
+const add = (...numbers) => {
+    let total = 0;
+    for (let number of numbers) {
+        total += number;
+    }
+    return total;
+};
+console.log(add(5, 2, 3));
+console.log(add(5, 2, 3, 4));
+const addNumbers = add(1, 2, 3, 4, 5);
+console.log(addNumbers);
 const it = new ITDepartment('d1', ['Max']);
 it.addEmployee('Maria');
 it.addEmployee('Manu');
