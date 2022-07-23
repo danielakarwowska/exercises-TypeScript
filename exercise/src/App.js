@@ -1,13 +1,12 @@
-import './App.css';
-import Dropdown from './components/dropdown'
+import ContactForm from "./components/ContactForm";
 
 function App() {
   return (
-    <div className="App">
-    <h1>Dropdown</h1>
-    <Dropdown/>
+    <div>
+      <ContactForm/>
     </div>
   );
 }
 
 export default App;
+
